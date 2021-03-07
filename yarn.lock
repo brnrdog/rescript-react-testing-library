@@ -746,7 +746,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@testing-library/dom@^7.28.1":
+"@testing-library/dom@^7.28.1", "@testing-library/dom@^7.29.4":
   version "7.30.0"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.30.0.tgz#53697851f7708a1448cc30b74a2ea056dd709cd6"
   integrity sha512-v4GzWtltaiDE0yRikLlcLAfEiiK8+ptu6OuuIebm9GdC2XlZTNDPGEfM2UkEtnH7hr9TRq2sivT5EA9P1Oy7bw==
@@ -6184,6 +6184,14 @@ require-main-filename@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-2.0.0.tgz#d0b329ecc7cc0f61649f62215be69af54aa8989b"
   integrity sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==
+
+rescript-dom-testing-library@^1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/rescript-dom-testing-library/-/rescript-dom-testing-library-1.12.0.tgz#33f6363c5cacabc1a1954aa0148667d182daf0ef"
+  integrity sha512-bd2gJh5QomngKdoM5ezwGlZRCthG8EjRpQh6uwoBi2uGmlhY+2ocfSTdxaqlYbAhpQTOXoL+ExWTYFeKjYWlUg==
+  dependencies:
+    "@testing-library/dom" "^7.29.4"
+    commitizen "^4.2.3"
 
 resolve-cwd@^3.0.0:
   version "3.0.0"

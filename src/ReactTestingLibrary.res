@@ -1,6 +1,8 @@
+include DomTestingLibrary
+
 type queries
 type reactComponent
-type renderResult
+type renderResult = Js.Dict.t<{"container": Dom.element}>
 
 type options = {
   "baseElement": Js.undefined<Dom.element>,
@@ -11,7 +13,7 @@ type options = {
 }
 
 @module("@testing-library/react")
-external render: (React.element, ~options: options) => renderResult = "render"
+external _render: (React.element, ~options: options) => renderResult = "render"
 let render = (~baseElement=?, ~container=?, ~hydrate=?, ~wrapper=?, ~queries=?, element) => {
   let options = {
     "baseElement": baseElement->Js.Undefined.fromOption,
@@ -21,5 +23,17 @@ let render = (~baseElement=?, ~container=?, ~hydrate=?, ~wrapper=?, ~queries=?, 
     "queries": queries->Js.Undefined.fromOption,
   }
 
-  element->render(~options)
+  element->_render(~options)
+}
+
+let renderElement = (~baseElement=?, ~container=?, ~hydrate=?, ~wrapper=?, ~queries=?, element) => {
+  let options = {
+    "baseElement": baseElement->Js.Undefined.fromOption,
+    "container": container->Js.Undefined.fromOption,
+    "hydrate": hydrate->Js.Undefined.fromOption,
+    "wrapper": wrapper->Js.Undefined.fromOption,
+    "queries": queries->Js.Undefined.fromOption,
+  }
+
+  element->_render(~options)->Js.Dict.get("container")
 }

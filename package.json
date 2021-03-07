@@ -22,12 +22,13 @@
     "@rescript/react": "^0.10.1",
     "bs-jest-dom": "^4.1.1",
     "bs-platform": "^9.0.1",
-    "react-dom": "^17.0.1",
     "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "semantic-release": "^17.3.9"
   },
   "dependencies": {
     "@testing-library/react": "^11.2.5",
-    "commitizen": "^4.2.3"
+    "commitizen": "^4.2.3",
+    "rescript-dom-testing-library": "^1.12.0"
   }
 }
