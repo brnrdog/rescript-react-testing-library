@@ -1,7 +1,7 @@
 # ReScript React Testing Library
 
 [![npm](https://img.shields.io/npm/v/rescript-react-testing-library?label=version&style=flat-square)](https://www.npmjs.com/package/rescript-react-testing-library)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/brnrdog/rescript-react-testing-library/Version%20Release?style=flat-square)](https://github.com/brnrdog/rescript-react-testing-library/actions/workflows/release.yml)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/brnrdog/rescript-react-testing-library/Release?style=flat-square)](https://github.com/brnrdog/rescript-react-testing-library/actions/workflows/release.yml)
 ![Codecov](https://img.shields.io/codecov/c/github/brnrdog/rescript-react-testing-library?style=flat-square)
 
 ReScript bindings for [testing-library/react](https://github.com/testing-library/react-testing-library/).
