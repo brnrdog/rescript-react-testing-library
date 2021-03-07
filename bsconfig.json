@@ -1,5 +1,5 @@
 {
-  "name": "rescript-dom-testing-library",
+  "name": "rescript-react-testing-library",
   "version": "0.1.0",
   "sources": [
     {
@@ -12,7 +12,7 @@
     }
   ],
   "bs-dev-dependencies": ["@glennsl/bs-jest", "bs-jest-dom"],
-  "bs-dependencies": ["@rescript/react"],
+  "bs-dependencies": ["@rescript/react", "rescript-dom-testing-library"],
   "reason": {
     "react-jsx": 3
   }
