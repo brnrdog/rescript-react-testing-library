@@ -5,10 +5,35 @@ open ReactTestingLibrary
 module Dummy = {
   @react.component
   let make = () => {
-    <div> {React.string("Hello World")} </div>
+    <div>
+      <label> {React.string("Choose a color")} </label>
+      <select>
+        <option> {React.string("Red")} </option>
+        <option> {React.string("Green")} </option>
+        <option> {React.string("Blue")} </option>
+      </select>
+    </div>
   }
 }
 
-test("render", () => {
-  <Dummy />->render |> expect |> toMatchSnapshot
+let setup = () => {
+  renderElement(<Dummy />)
+}
+
+test("render red option", () => {
+  setup()->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Red", ()))
+  |> expect
+  |> toMatchSnapshot
+})
+
+test("render red option", () => {
+  setup()->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Green", ()))
+  |> expect
+  |> toMatchSnapshot
+})
+
+test("render red option", () => {
+  setup()->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Blue", ()))
+  |> expect
+  |> toMatchSnapshot
 })
