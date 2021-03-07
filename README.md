@@ -29,6 +29,9 @@ open Jest
 open Expect
 open ReactTestingLibrary
 
+// Make it pipe-first:
+let toMatchSnapshot = a => a |> Expect.toMatchSnapshot
+
 module Dummy = {
   @react.component
   let make = () => {
@@ -48,20 +51,24 @@ let setup = () => {
 }
 
 test("render red option", () => {
-  setup()->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Red", ()))
-  |> expect
-  |> toMatchSnapshot
+  setup()
+  ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Red", ()))
+  ->expect
+  ->toMatchSnapshot
 })
 
 test("render red option", () => {
-  setup()->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Green", ()))
-  |> expect
-  |> toMatchSnapshot
+  setup()
+  ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Green", ()))
+  ->expect
+  ->toMatchSnapshot
 })
 
 test("render red option", () => {
-  setup()->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Blue", ()))
-  |> expect
-  |> toMatchSnapshot
+  setup()
+  ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Blue", ()))
+  ->expect
+  ->toMatchSnapshot
 })
+
 ```
