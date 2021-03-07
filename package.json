@@ -1,0 +1,33 @@
+{
+  "name": "rescript-react-testing-library",
+  "description": "ReScript bindings for @testing-library/react",
+  "version": "0.0.0-semantic-released",
+  "scripts": {
+    "clean": "bsb -clean-world",
+    "build": "bsb -make-world",
+    "watch": "bsb -make-world -w",
+    "test": "jest test",
+    "commit": "cz"
+  },
+  "keywords": [
+    "ReScript",
+    "BuckleScript",
+    "React",
+    "test"
+  ],
+  "author": "Bernardo Gurgel <brnrdog@hey.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@glennsl/bs-jest": "^0.6.0",
+    "@rescript/react": "^0.10.1",
+    "bs-jest-dom": "^4.1.1",
+    "bs-platform": "^9.0.1",
+    "react-dom": "^17.0.1",
+    "react": "^17.0.1",
+    "semantic-release": "^17.3.9"
+  },
+  "dependencies": {
+    "@testing-library/react": "^11.2.5",
+    "commitizen": "^4.2.3"
+  }
+}
