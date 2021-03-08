@@ -48,7 +48,7 @@ module DummyComponent = {
 
 describe("DummyComponent", () => {
   beforeEach(() => {
-    render(<DummyComponent />)
+    <DummyComponent />->renderOnScreen
   })
 
   test("render Red option", () => {
@@ -72,5 +72,4 @@ describe("DummyComponent", () => {
     ->toMatchSnapshot
   })
 })
-
 ```
