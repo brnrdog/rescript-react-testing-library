@@ -5,7 +5,7 @@ open ReactTestingLibrary
 // Make it pipe-first:
 let toMatchSnapshot = a => a |> Expect.toMatchSnapshot
 
-module Dummy = {
+module DummyComponent = {
   @react.component
   let make = () => {
     <div>
@@ -13,33 +13,35 @@ module Dummy = {
       <select>
         <option> {React.string("Red")} </option>
         <option> {React.string("Green")} </option>
-        <option> {React.string("Blue")} </option>
+        <option onClick={_ => Js.log("Blue")}> {React.string("Blue")} </option>
       </select>
     </div>
   }
 }
 
-let setup = () => {
-  renderElement(<Dummy />)
-}
+describe("DummyComponent", () => {
+  beforeEach(() => {
+    <DummyComponent />->renderOnScreen
+  })
 
-test("render red option", () => {
-  setup()
-  ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Red", ()))
-  ->expect
-  ->toMatchSnapshot
-})
+  test("render red option", () => {
+    screen
+    ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Red", ()))
+    ->expect
+    ->toMatchSnapshot
+  })
 
-test("render red option", () => {
-  setup()
-  ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Green", ()))
-  ->expect
-  ->toMatchSnapshot
-})
+  test("render red option", () => {
+    screen
+    ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Green", ()))
+    ->expect
+    ->toMatchSnapshot
+  })
 
-test("render red option", () => {
-  setup()
-  ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Blue", ()))
-  ->expect
-  ->toMatchSnapshot
+  test("render red option", () => {
+    screen
+    ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Blue", ()))
+    ->expect
+    ->toMatchSnapshot
+  })
 })
