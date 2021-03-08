@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DummyComponent render red option 1`] = `
+exports[`DummyComponent render Blue option 1`] = `
 <option>
-  Red
+  Blue
 </option>
 `;
 
-exports[`DummyComponent render red option 2`] = `
+exports[`DummyComponent render Green option 1`] = `
 <option>
   Green
 </option>
 `;
 
-exports[`DummyComponent render red option 3`] = `
+exports[`DummyComponent render Red option 1`] = `
 <option>
-  Blue
+  Red
 </option>
 `;

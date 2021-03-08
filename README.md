@@ -51,21 +51,21 @@ describe("DummyComponent", () => {
     render(<DummyComponent />)
   })
 
-  test("render red option", () => {
+  test("render Red option", () => {
     screen
     ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Red", ()))
     ->expect
     ->toMatchSnapshot
   })
 
-  test("render red option", () => {
+  test("render Green option", () => {
     screen
     ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Green", ()))
     ->expect
     ->toMatchSnapshot
   })
 
-  test("render red option", () => {
+  test("render Blue option", () => {
     screen
     ->getByRole(~matcher=#Str("option"), ~options=makeByRoleOptions(~name="Blue", ()))
     ->expect
