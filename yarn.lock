@@ -782,10 +782,10 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^7.28.1"
 
-"@testing-library/user-event@^12.8.1":
-  version "12.8.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.8.1.tgz#aa897d6e7f0cf2208385abc2da2ac3f5844bbd00"
-  integrity sha512-u521YhkCKip0DQNDpfj9V97PU7UlCTkW5jURUD4JipuVe/xDJ32dJSIHlT2pqAs/I91OFB8p6LtqaLZpOu8BWQ==
+"@testing-library/user-event@^13.1.9":
+  version "13.1.9"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-13.1.9.tgz#29e49a42659ac3c1023565ff56819e0153a82e99"
+  integrity sha512-NZr0zL2TMOs2qk+dNlqrAdbaRW5dAmYwd1yuQ4r7HpkVEOj0MWuUjDWwKhcLd/atdBy8ZSMHSKp+kXSQe47ezg==
   dependencies:
     "@babel/runtime" "^7.12.5"
 
@@ -6187,12 +6187,13 @@ require-main-filename@^2.0.0:
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-2.0.0.tgz#d0b329ecc7cc0f61649f62215be69af54aa8989b"
   integrity sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==
 
-rescript-dom-testing-library@^1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/rescript-dom-testing-library/-/rescript-dom-testing-library-1.12.0.tgz#33f6363c5cacabc1a1954aa0148667d182daf0ef"
-  integrity sha512-bd2gJh5QomngKdoM5ezwGlZRCthG8EjRpQh6uwoBi2uGmlhY+2ocfSTdxaqlYbAhpQTOXoL+ExWTYFeKjYWlUg==
+rescript-dom-testing-library@^1.14.0:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/rescript-dom-testing-library/-/rescript-dom-testing-library-1.14.0.tgz#65cc8c975d1c58736057954f3e5267850435bbf1"
+  integrity sha512-5lyidM8SMdLFYQVQWU+n6gjFqTkkVp5ZAqWIYjaXyDakNjgniVBhOk02xCc1QSCmqjqotWkGn/yIeSLEUqQ54Q==
   dependencies:
     "@testing-library/dom" "^7.29.4"
+    "@testing-library/user-event" "^13.1.9"
     commitizen "^4.2.3"
 
 rescript@^9.1.3:
