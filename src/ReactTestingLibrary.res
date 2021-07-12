@@ -25,7 +25,8 @@ let render = (~baseElement=?, ~container=?, ~hydrate=?, ~wrapper=?, ~queries=?, 
     "queries": queries->Js.Undefined.fromOption,
   }
 
-  element->_render(~options)
+  let result = element->_render(~options)
+  result.container
 }
 
 let renderOnScreen = element => element->render->(_ => ())
