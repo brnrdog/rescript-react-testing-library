@@ -11,9 +11,9 @@
       "type": "dev"
     }
   ],
-  "bs-dev-dependencies": ["@glennsl/bs-jest", "bs-jest-dom"],
-  "bs-dependencies": ["@rescript/react", "rescript-dom-testing-library"],
   "reason": {
     "react-jsx": 3
-  }
+  },
+  "bs-dev-dependencies": ["@glennsl/bs-jest", "bs-jest-dom"],
+  "bs-dependencies": ["@rescript/react", "rescript-dom-testing-library"]
 }
